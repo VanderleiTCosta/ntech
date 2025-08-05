@@ -1,0 +1,770 @@
+/* Definição de Variáveis para o TEMA CLARO (Padrão) */
+:root {
+    --background-color: #ffffff;
+    --secondary-bg-color: #f4f4f4;
+    --text-color: #333333;
+    --heading-color: #111111;
+    --border-color: #e0e0e0;
+    --accent-color: #4A90E2;
+    --accent-color-darker: #357ABD;
+    --primary-font: 'Inter', sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    --transition: all 0.3s ease-in-out;
+}
+
+/* Definição de Variáveis para o TEMA ESCURO */
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --secondary-bg-color: #252525;
+    --text-color: #cccccc;
+    --heading-color: #ffffff;
+    --border-color: #444444;
+}
+
+/* Reset e Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--heading-color);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Header e Navegação Atualizados */
+.main-header {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navbar-logo img {
+    height: 45px;
+}
+
+.navbar-menu {
+    display: none;
+    /* Escondido por padrão em telas menores */
+}
+
+@media (min-width: 768px) {
+    .navbar-menu {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: var(--accent-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle-btn {
+    background: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hide-on-mobile {
+        display: inline-block;
+    }
+}
+
+.navbar-toggle {
+    display: block;
+    /* Visível por padrão em telas menores */
+    background: none;
+    border: none;
+    color: var(--heading-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+/* Botões */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    font-size: 1rem;
+    border: 2px solid var(--accent-color);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-darker);
+    border-color: var(--accent-color-darker);
+}
+
+.btn-secondary {
+    color: var(--accent-color);
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+
+/* Estilos da Seção Hero (Página Inicial) */
+.hero {
+    text-align: center;
+    padding: 4rem 5%;
+    background-color: var(--secondary-bg-color);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: var(--text-color);
+}
+
+/* Estilos dos Pilares (Página Inicial) */
+.pillars {
+    padding: 6rem 5%;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.pillars h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.pillar-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-card img {
+    height: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.pillar-card h3 {
+    margin-bottom: 1rem;
+}
+
+.pillar-card p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* Estilos para Páginas Internas */
+.page-container {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 3rem 5%;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+    color: var(--heading-color);
+}
+
+/* Estilos Página Ecossistema */
+#ecosystem-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.ecosystem-detail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    background: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .ecosystem-detail-card {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.ecosystem-card-icon img {
+    height: 70px;
+}
+
+.ecosystem-card-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ecosystem-card-content p {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* Estilos para cards "Em Breve" */
+.is-coming-soon {
+    position: relative;
+    overflow: hidden;
+}
+
+.is-coming-soon .ecosystem-card-content {
+    opacity: 0.6;
+}
+
+.is-coming-soon::after {
+    content: 'EM BREVE';
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 5px 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.is-coming-soon button:disabled {
+    cursor: not-allowed;
+    background-color: transparent;
+    border-color: var(--text-color);
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Estilos Página Sobre */
+.about-content h1 {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.about-content .team-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.about-content .team-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.about-content .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-content .team-member {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.about-content .team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.about-content .team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-content .team-member p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+
+/* Estilos Página Contato */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+.contact-card {
+    background: var(--secondary-bg-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+}
+
+.contact-card h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-card p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: var(--heading-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Estilos do Rodapé */
+.main-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    background-color: var(--secondary-bg-color);
+    padding: 4rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.footer-top h2 {
+    font-size: 2.2rem;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    color: var(--heading-color);
+}
+
+.footer-top p {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    color: var(--text-color);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer-col .logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.footer-col .footer-tagline {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.footer-social p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-main .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-main .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.footer-main .social-icons a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+}
+
+.footer-col .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col .footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-col .footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.footer-col .footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ANIMAÇÃO */
+.pillar-card,
+.page-header,
+.ecosystem-detail-card,
+.about-content>*,
+.team-section>*,
+.contact-card {
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/* Estilos para Menu Mobile */
+@media (max-width: 767px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        box-shadow: var(--box-shadow);
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .navbar-menu li a {
+        display: block;
+        padding: 0.75rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .navbar-menu li:last-child a {
+        border-bottom: none;
+    }
+}
+
+
+/* ESTILOS FORMULÁRIO DE CONTATO  */
+
+.contact-form .form-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Começa com uma coluna em telas pequenas */
+    gap: 1.5rem;
+}
+
+/* Em telas maiores, o formulário terá duas colunas */
+@media (min-width: 768px) {
+    .contact-form .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz um campo ocupar a largura total das duas colunas */
+.contact-form .full-width {
+    grid-column: 1 / -1;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* ESTILOS DA PÁGINA DE OBRIGADO          */
+
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Altura mínima para ocupar boa parte da tela */
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: var(--secondary-bg-color);
+    margin: 3rem auto;
+    max-width: 800px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.thank-you-icon {
+    font-size: 4rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-container h1 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.thank-you-container p {
+    font-size: 1.125rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+/* ================================================= */
+/* ESTILOS APRIMORADOS PARA O CARD DE CONTATO  */
+/* ================================================= */
+
+#contact-info.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espaçamento entre os blocos de contato */
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start; /* Alinha o ícone com o topo do texto */
+    gap: 1.5rem;
+}
+
+.contact-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1.2rem;
+    flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+.contact-item-text h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.contact-item-text p,
+.contact-item-text a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.contact-item-text a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
