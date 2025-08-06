@@ -1,31 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nossas Soluções - Notreve Tech</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="main-header">
-        </header>
+      <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+          <img src="./assets/images/colorida.png" alt="Logo Notreve Tech" />
+        </a>
+        <ul class="navbar-menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle-btn">☀️</button>
+          <a href="contato.html" class="btn-primary hide-on-mobile">Contato</a>
+          <button class="navbar-toggle">☰</button>
+        </div>
+      </nav>
+    </header>
 
     <main class="page-container">
-        <div class="section-header">
-            <h1>Nossas Soluções de API</h1>
-            <p>Integrações poderosas para levar sua empresa ao próximo nível.</p>
-        </div>
-        <div id="products-container-detailed"></div>
+      <div class="section-header">
+        <h1>Nossas Soluções de API</h1>
+        <p>Integrações poderosas para levar sua empresa ao próximo nível.</p>
+      </div>
+      <div id="products-container-detailed"></div>
     </main>
 
-    <footer class="main-footer section">
-        </footer>
+    <div id="product-modal" class="modal-overlay">
+      <div class="modal-container">
+        <button id="close-modal-btn" class="close-modal-btn">&times;</button>
+        <div class="modal-header">
+          <h2 id="modal-title"></h2>
+        </div>
+        <div class="modal-body">
+          <div id="modal-plans-container" class="plans-grid"></div>
+        </div>
+        <div class="modal-footer">
+          <a
+            id="modal-purchase-link"
+            href="#"
+            target="_blank"
+            class="btn-primary btn-lg"
+            >Quero Comprar</a
+          >
+        </div>
+      </div>
+    </div>
 
+    <footer id="footer" class="main-footer section">
+      <div class="container">
+        <div class="footer-top">
+          <h2>
+            Vamos construir juntos a próxima geração da sua operação financeira?
+          </h2>
+          <p>
+            Nossa equipe está pronta para entender seu desafio e desenhar uma
+            solução de API sob medida.
+          </p>
+          <a href="contato.html" class="btn btn-primary btn-lg"
+            >FALE COM UM ESPECIALISTA</a
+          >
+        </div>
+        <div class="footer-main">
+          <div class="footer-col">
+            <a href="index.html" class="logo"
+              ><img src="./assets/images/colorida.png" alt="Notreve Tech Logo"
+            /></a>
+            <p class="footer-tagline">
+              Notreve Tech — Infratech para potencializar negócios.
+            </p>
+            <div class="footer-social">
+              <p><strong>Siga-nos nas redes</strong></p>
+              <div class="social-icons">
+                <a
+                  href="#"
+                  target="_blank"
+                  aria-label="Instagram"
+                  title="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="#"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="#" target="_blank" aria-label="GitHub" title="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Nossos Serviços</h4>
+            <ul class="footer-links">
+              <li><a href="produtos.html" class="link">API de WhatsApp</a></li>
+              <li><a href="produtos.html" class="link">API de SMS</a></li>
+              <li>
+                <a href="produtos.html" class="link">Gateway de Pagamento</a>
+              </li>
+              <li>
+                <a href="produtos.html" class="link"
+                  >Chatbot com IA (Em Breve)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Desenvolvedores</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="#" target="_blank" class="link">Documentação</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="link">Status da API</a>
+              </li>
+              <li><a href="contato.html" class="link">Suporte Técnico</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="#" target="_blank" class="link">Termos de Uso</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="link"
+                  >Política de Privacidade</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Notreve Tech | Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

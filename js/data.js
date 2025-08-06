@@ -11,35 +11,76 @@ const siteData = {
   products: [
     {
       id: "whatsapp",
-      icon: "fa-brands fa-whatsapp", // Ícone do Font Awesome
+      icon: "fa-brands fa-whatsapp",
       title: "API de WhatsApp",
       shortDescription:
         "Integre o canal de comunicação mais popular do Brasil diretamente em seus sistemas para automação, vendas e suporte.",
       status: "live",
+      purchaseLink: "https://app.notrevetech.com.br/index.php?rp=/store/apis-de-whatsapp",
+      plans: [
+        {
+          name: "Básico",
+          price: "R$ 99/mês",
+          features: ["1 Conexão", "1.000 Mensagens/mês", "Suporte via Ticket"]
+        },
+        {
+          name: "Profissional",
+          price: "R$ 299/mês",
+          features: ["5 Conexões", "5.000 Mensagens/mês", "API de Status", "Suporte Prioritário"]
+        },
+        {
+          name: "Empresarial",
+          price: "Personalizado",
+          features: ["Conexões Ilimitadas", "Volume de Mensagens Sob Demanda", "Gestor de Contas Dedicado"]
+        }
+      ]
     },
     {
       id: "sms",
-      icon: "fa-solid fa-comment-sms", // Ícone do Font Awesome
+      icon: "fa-solid fa-comment-sms",
       title: "API de SMS",
       shortDescription:
         "Envie notificações, alertas de segurança e campanhas de marketing com uma API de SMS confiável e de alta entrega.",
       status: "live",
+      purchaseLink: "https://app.notrevetech.com.br/index.php?rp=/store/apis-de-sms",
+      plans: [
+        {
+          name: "Starter",
+          price: "R$ 0,10 por SMS",
+          features: ["Pacote de 1.000 SMS", "API REST", "Relatórios de Entrega"]
+        },
+        {
+          name: "Business",
+          price: "R$ 0,08 por SMS",
+          features: ["Pacote de 10.000 SMS", "Shortcode Opcional", "Suporte Prioritário"]
+        }
+      ]
     },
     {
       id: "gateway",
-      icon: "fa-solid fa-credit-card", // Ícone do Font Awesome
+      icon: "fa-solid fa-credit-card",
       title: "Gateway de Pagamento",
       shortDescription:
         "Processe pagamentos de forma segura e eficiente com uma API robusta e de fácil integração para seus produtos e serviços.",
       status: "live",
+      purchaseLink: "https://app.notrevetech.com.br/index.php?rp=/store/servidores-and-vps", // Assumindo que este link é para o Gateway
+      plans: [
+        {
+          name: "Transacional",
+          price: "Sob Consulta",
+          features: ["API de PIX", "API de Boletos", "Taxas Competitivas por Volume", "Dashboard Financeiro"]
+        }
+      ]
     },
     {
       id: "chatbot",
-      icon: "fa-solid fa-robot", // Ícone do Font Awesome
+      icon: "fa-solid fa-robot",
       title: "Chatbot com IA",
       shortDescription:
         "Automatize o atendimento ao cliente com um chatbot inteligente que aprende e resolve as necessidades dos seus usuários.",
-      status: "soon", // EM BREVE
+      status: "soon",
+      purchaseLink: "#",
+      plans: []
     },
   ],
   // Conteúdo da Página Sobre (agora focado na Notreve Tech)
