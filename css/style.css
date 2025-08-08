@@ -532,6 +532,36 @@ a.product-detail-card {
     color: var(--accent-color);
 }
 
+/* =================================================================== */
+/* ESTILOS PARA A CHAMADA DE AÇÃO FINAL (FINAL CTA)                  */
+/* =================================================================== */
+
+.final-cta {
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+}
+
+.final-cta .container {
+    max-width: 800px;
+}
+
+.final-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .final-cta h2 {
+        font-size: 2.5rem;
+    }
+}
+
 /* ---------------- FOOTER ------------------------------------------- */
 .main-footer {
     padding: 3rem 0 2rem;
