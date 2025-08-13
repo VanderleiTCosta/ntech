@@ -1,13 +1,19 @@
 const siteData = {
   // Conteúdo da Página Inicial
   hero: {
-    title: "Plataformas White Label para Automatizar e Escalar seu Negócio.",
+    // TÍTULOS ROTATIVOS
+    title: [
+      "Plataformas White Label para o seu Negócio.",
+      "Crie seu Próprio Gateway de Pagamentos.",
+      "Comunicação Automatizada com WhatsApp e SMS.",
+      "APIs Robustas para Desenvolvedores."
+    ],
     subtitle:
-      "Oferecemos a infraestrutura completa para a sua empresa criar seu próprio gateway de pagamentos e soluções de comunicação com a sua marca.",
+      "Oferecemos a infraestrutura completa para a sua empresa criar soluções de pagamentos e comunicação com a sua própria marca.",
     buttonText: "Conheça Nossos Produtos",
     buttonLink: "produtos.html",
   },
-  // Produtos vendidos pela Notreve Tech
+  // O resto do ficheiro permanece igual...
   products: [
     {
       id: "gateway",
@@ -32,7 +38,7 @@ const siteData = {
       icon: "fa-solid fa-comment-sms",
       title: "API de SMS",
       shortDescription:
-        "Envie notificações, alertas e campanhas de marketing com uma API de SMS confiável e de alta entrega.",
+        "Envie notificações, alertas de segurança e campanhas de marketing com uma API de SMS confiável e de alta entrega.",
       status: "live",
       pageLink: "api-sms.html",
     },
@@ -46,136 +52,84 @@ const siteData = {
       pageLink: "#",
     },
   ],
-  // ===================================================================
-  // CONTEÚDO DETALHADO PARA AS PÁGINAS DE PRODUTO
-  // ===================================================================
   productPages: {
     gateway: {
       hero: {
-        title: "Sua Marca, Suas Regras: Crie seu Próprio Gateway de Pagamento",
-        subtitle:
-          "Com a nossa plataforma White Label, a sua empresa pode oferecer uma solução de pagamentos completa, sem se preocupar com a complexidade da infraestrutura financeira.",
+        title: "Crie seu Próprio Gateway de Pagamento",
+        subtitle: "Com a nossa plataforma White Label, a sua empresa pode oferecer uma solução de pagamentos completa, sem se preocupar com a complexidade da infraestrutura financeira."
       },
       sections: [
         {
           title: "O que é a Plataforma de Gateway White Label?",
-          content:
-            "<p>É uma solução completa que permite que a sua empresa processe transações de PIX, boletos e cartões de crédito sob a sua própria marca. Nós cuidamos de toda a tecnologia, segurança e conformidade regulatória, enquanto você foca em escalar o seu negócio e fortalecer a sua marca no mercado.</p>",
+          content: "<p>É uma solução completa que permite que a sua empresa processe transações de PIX, boletos e cartões de crédito sob a sua própria marca. Nós cuidamos de toda a tecnologia, segurança e conformidade regulatória, enquanto você foca em escalar o seu negócio e fortalecer a sua marca no mercado.</p>"
         },
         {
           title: "Funcionalidades Incluídas",
           features: [
-            {
-              icon: "fa-solid fa-server",
-              text: "API RESTful robusta e de fácil integração.",
-            },
-            {
-              icon: "fa-solid fa-shield-halved",
-              text: "Segurança de ponta e conformidade com o Banco Central.",
-            },
-            {
-              icon: "fa-solid fa-chart-line",
-              text: "Dashboard administrativo para gestão de clientes e transações.",
-            },
-            {
-              icon: "fa-solid fa-file-invoice-dollar",
-              text: "Liquidação automática e relatórios financeiros detalhados.",
-            },
-            {
-              icon: "fa-solid fa-headset",
-              text: "Suporte técnico especializado para a sua equipa.",
-            },
-          ],
+            { icon: "fa-solid fa-server", text: "API RESTful robusta e de fácil integração." },
+            { icon: "fa-solid fa-shield-halved", text: "Segurança de ponta e conformidade com o Banco Central." },
+            { icon: "fa-solid fa-chart-line", text: "Dashboard administrativo para gestão de clientes e transações." },
+            { icon: "fa-solid fa-file-invoice-dollar", text: "Liquidação automática e relatórios financeiros detalhados." },
+            { icon: "fa-solid fa-headset", text: "Suporte técnico especializado para a sua equipa." }
+          ]
         },
         {
           title: "Como Funciona?",
-          content:
-            "<p>Nossa equipa trabalha consigo para personalizar a plataforma com a sua identidade visual. Após a configuração, você recebe acesso à nossa API e a um painel de controlo completo para começar a operar. É a forma mais rápida e segura de se tornar um provedor de pagamentos.</p>",
-        },
-      ],
+          content: "<p>Nossa equipa trabalha consigo para personalizar a plataforma com a sua identidade visual. Após a configuração, você recebe acesso à nossa API e a um painel de controlo completo para começar a operar. É a forma mais rápida e segura de se tornar um provedor de pagamentos.</p>"
+        }
+      ]
     },
     whatsapp: {
       hero: {
         title: "Conecte-se Instantaneamente com a API de WhatsApp",
-        subtitle:
-          "Automatize conversas, envie notificações e ofereça suporte de alto nível no canal de comunicação preferido dos seus clientes.",
+        subtitle: "Automatize conversas, envie notificações e ofereça suporte de alto nível no canal de comunicação preferido dos seus clientes."
       },
       sections: [
         {
           title: "Por que integrar a API de WhatsApp?",
-          content:
-            "<p>O WhatsApp é mais do que um aplicativo de mensagens; é uma ferramenta de negócios poderosa. Com a nossa API, a sua empresa pode centralizar a comunicação, automatizar respostas e criar experiências personalizadas que aumentam o engajamento e as vendas.</p>",
+          content: "<p>O WhatsApp é mais do que um aplicativo de mensagens; é uma ferramenta de negócios poderosa. Com a nossa API, a sua empresa pode centralizar a comunicação, automatizar respostas e criar experiências personalizadas que aumentam o engajamento e as vendas.</p>"
         },
         {
           title: "Casos de Uso Principais",
           features: [
-            {
-              icon: "fa-solid fa-bell",
-              text: "Envio de notificações transacionais (confirmação de pedido, status de entrega).",
-            },
-            {
-              icon: "fa-solid fa-headset",
-              text: "Automação de atendimento ao cliente com ou sem chatbots.",
-            },
-            {
-              icon: "fa-solid fa-rocket",
-              text: "Campanhas de marketing e recuperação de carrinhos abandonados.",
-            },
-            {
-              icon: "fa-solid fa-user-check",
-              text: "Verificação de contas e autenticação de dois fatores (2FA).",
-            },
-          ],
+            { icon: "fa-solid fa-bell", text: "Envio de notificações transacionais (confirmação de pedido, status de entrega)." },
+            { icon: "fa-solid fa-headset", text: "Automação de atendimento ao cliente com ou sem chatbots." },
+            { icon: "fa-solid fa-rocket", text: "Campanhas de marketing e recuperação de carrinhos abandonados." },
+            { icon: "fa-solid fa-user-check", text: "Verificação de contas e autenticação de dois fatores (2FA)." }
+          ]
         },
         {
           title: "Como Funciona?",
-          content:
-            "<p>A nossa integração foi desenhada para ser rápida e intuitiva. Após criar a sua conta, basta conectar o seu número de WhatsApp através da leitura de um QR Code, obter a sua chave de API no nosso painel e começar a enviar e receber mensagens através dos seus sistemas em questão de minutos.</p>",
-        },
-      ],
+          content: "<p>A nossa integração foi desenhada para ser rápida e intuitiva. Após criar a sua conta, basta conectar o seu número de WhatsApp através da leitura de um QR Code, obter a sua chave de API no nosso painel e começar a enviar e receber mensagens através dos seus sistemas em questão de minutos.</p>"
+        }
+      ]
     },
     sms: {
       hero: {
         title: "Comunicação Direta e Confiável com a API de SMS",
-        subtitle:
-          "Alcance qualquer cliente, a qualquer momento, com uma API de SMS de alta performance e taxas de entrega garantidas.",
+        subtitle: "Alcance qualquer cliente, a qualquer momento, com uma API de SMS de alta performance e taxas de entrega garantidas."
       },
       sections: [
         {
           title: "O Poder da Simplicidade do SMS",
-          content:
-            "<p>Apesar das novas tecnologias, o SMS continua a ser o canal de comunicação mais universal e com a maior taxa de abertura. É a ferramenta ideal para mensagens críticas que precisam de ser lidas imediatamente.</p>",
+          content: "<p>Apesar das novas tecnologias, o SMS continua a ser o canal de comunicação mais universal e com a maior taxa de abertura. É a ferramenta ideal para mensagens críticas que precisam de ser lidas imediatamente.</p>"
         },
         {
           title: "Ideal para",
           features: [
-            {
-              icon: "fa-solid fa-key",
-              text: "Tokens de segurança e senhas de uso único (OTP).",
-            },
-            {
-              icon: "fa-solid fa-calendar-check",
-              text: "Lembretes de agendamentos, consultas e vencimentos.",
-            },
-            {
-              icon: "fa-solid fa-truck-fast",
-              text: "Alertas de logística e atualizações de status de pedidos.",
-            },
-            {
-              icon: "fa-solid fa-bullhorn",
-              text: "Comunicações de emergência e avisos importantes.",
-            },
-          ],
+            { icon: "fa-solid fa-key", text: "Tokens de segurança e senhas de uso único (OTP)." },
+            { icon: "fa-solid fa-calendar-check", text: "Lembretes de agendamentos, consultas e vencimentos." },
+            { icon: "fa-solid fa-truck-fast", text: "Alertas de logística e atualizações de status de pedidos." },
+            { icon: "fa-solid fa-bullhorn", text: "Comunicações de emergência e avisos importantes." }
+          ]
         },
         {
           title: "Como Funciona?",
-          content:
-            "<p>Construída por desenvolvedores, para desenvolvedores. A nossa API de SMS é extremamente simples de usar. Crie a sua conta, obtenha a sua chave de API e, com um simples comando cURL ou utilizando as nossas bibliotecas, a sua aplicação já estará pronta para enviar SMS para qualquer lugar do Brasil.</p>",
-        },
-      ],
-    },
+          content: "<p>Construída por desenvolvedores, para desenvolvedores. A nossa API de SMS é extremamente simples de usar. Crie a sua conta, obtenha a sua chave de API e, com um simples comando cURL ou utilizando as nossas bibliotecas, a sua aplicação já estará pronta para enviar SMS para qualquer lugar do Brasil.</p>"
+        }
+      ]
+    }
   },
-  // About, contact
   about: {
     title: "Nós Somos a Notreve Tecnologia",
     paragraphs: [

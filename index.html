@@ -3,64 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notreve Tech | Plataformas White Label para o seu Negócio</title>
+    <title>Notreve.tech | Plataformas White Label para o seu Negócio</title>
     <meta
       name="description"
       content="Oferecemos a infraestrutura de APIs e plataformas White Label para a sua empresa criar seu próprio gateway de pagamentos e soluções de comunicação."
     />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/icone colorido.png"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="main-header">
-      <nav class="navbar">
-        <a href="index.html" class="navbar-logo">
-          <img src="./assets/images/colorida.png" alt="Logo Notreve Tech" />
+    <header id="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="./assets/images/colorida.png" alt="Notreve Tech Logo" />
         </a>
-        <ul class="navbar-menu">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="sobre.html">Sobre Nós</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
+        <nav id="nav">
+          <ul id="menu">
+            <li><a href="index.html" class="link">Início</a></li>
+            <li><a href="produtos.html" class="link">Produtos</a></li>
+            <li><a href="sobre.html" class="link">Sobre Nós</a></li>
+            <li><a href="contato.html" class="link">Contato</a></li>
+          </ul>
+        </nav>
         <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
-          <a href="contato.html" class="btn-primary hide-on-mobile">Contato</a>
-          <button class="navbar-toggle">☰</button>
+          <a href="contato.html" class="btn btn-secondary hide-on-mobile"
+            >Contato</a
+          >
+          <button id="theme-toggle" aria-label="Mudar tema">
+            <i class="fas fa-sun"></i> <i class="fas fa-moon"></i>
+          </button>
         </div>
-      </nav>
+        <button id="btn-mobile" aria-label="Abrir Menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-background-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
+      <section id="hero" class="section">
+        <div class="aurora-background">
+          <div class="aurora-shape shape-1"></div>
+          <div class="aurora-shape shape-2"></div>
         </div>
         <div class="container hero-container">
-          <div class="hero-content">
-            <h1 id="hero-title"></h1>
+          <div class="hero-content animate-on-scroll animate-fade-in-up">
+            <div class="hero-carousel-wrapper">
+              <ul id="hero-carousel" class="hero-carousel"></ul>
+            </div>
             <p id="hero-subtitle"></p>
-            <a id="hero-button" href="#" class="btn-primary btn-lg"></a>
+            <a id="hero-button" href="#" class="btn btn-primary btn-lg"></a>
           </div>
-          <div class="hero-visual">
-            <img src="./assets/images/hero.png" alt="Ilustração de APIs e tecnologia" />
+          <div class="hero-image-wrapper animate-on-scroll animate-fade-in-up">
+            <img
+              src="assets/images/hero.png"
+              alt="Ilustração de APIs e tecnologia"
+            />
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <div class="section-header">
+          <div class="section-header animate-on-scroll animate-fade-in-up">
             <h2>Nossas Plataformas e Soluções</h2>
             <p>
               Tecnologia robusta para você construir e escalar o seu negócio.
@@ -71,55 +91,27 @@
       </section>
     </main>
 
-    <footer id="footer" class="main-footer section">
-        <div class="container">
-            <div class="footer-top">
-                <h2>Vamos construir juntos a próxima geração da sua operação?</h2>
-                <p>Nossa equipa está pronta para entender seu desafio e desenhar uma solução sob medida.</p>
-                <a href="contato.html" class="btn btn-primary btn-lg">FALE COM UM ESPECIALISTA</a>
-            </div>
-            <div class="footer-main">
-                <div class="footer-col">
-                    <a href="index.html" class="logo"><img src="./assets/images/colorida.png" alt="Notreve Tech Logo"/></a>
-                    <p class="footer-tagline">Notreve Tech — Infratech para potencializar negócios.</p>
-                    <div class="footer-social">
-                        <p><strong>Siga-nos nas redes</strong></p>
-                        <div class="social-icons">
-                            <a href="#" target="_blank" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" target="_blank" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Nossos Produtos</h4>
-                    <ul class="footer-links">
-                        <li><a href="gateway-pagamento.html" class="link">Gateway White Label</a></li>
-                        <li><a href="api-whatsapp.html" class="link">API de WhatsApp</a></li>
-                        <li><a href="api-sms.html" class="link">API de SMS</a></li>
-                        <li><a href="produtos.html" class="link">Chatbot com IA (Em Breve)</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Desenvolvedores</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" target="_blank" class="link">Documentação</a></li>
-                        <li><a href="#" target="_blank" class="link">Status da API</a></li>
-                        <li><a href="contato.html" class="link">Suporte Técnico</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" target="_blank" class="link">Termos de Uso</a></li>
-                        <li><a href="#" target="_blank" class="link">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Notreve Tech | Todos os direitos reservados.</p>
-            </div>
+    <footer id="footer" class="section">
+      <div class="aurora-background">
+        <div class="aurora-shape shape-1"></div>
+        <div class="aurora-shape shape-2"></div>
+      </div>
+      <div class="container">
+        <div class="footer-top animate-on-scroll animate-fade-in-up">
+          <h2>Vamos construir juntos a próxima geração da sua operação?</h2>
+          <p>
+            Nossa equipa está pronta para entender seu desafio e desenhar uma
+            solução sob medida.
+          </p>
+          <a href="contato.html" class="btn btn-primary btn-lg"
+            >FALE COM UM ESPECIALISTA</a
+          >
         </div>
+        <div class="footer-main"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Notreve Tech | Todos os direitos reservados.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/data.js"></script>

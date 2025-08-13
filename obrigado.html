@@ -18,23 +18,31 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="main-header">
-      <nav class="navbar">
-        <a href="index.html" class="navbar-logo">
-          <img src="./assets/images/colorida.png" alt="Logo Notreve Tech" />
+    <header id="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="./assets/images/colorida.png" alt="Notreve Tech Logo" />
         </a>
-        <ul class="navbar-menu">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="sobre.html">Sobre Nós</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
+        <nav id="nav">
+          <ul id="menu">
+            <li><a href="index.html" class="link">Início</a></li>
+            <li><a href="produtos.html" class="link">Produtos</a></li>
+            <li><a href="sobre.html" class="link">Sobre Nós</a></li>
+            <li><a href="contato.html" class="link">Contato</a></li>
+          </ul>
+        </nav>
         <div class="header-actions">
-          <button id="theme-toggle" class="theme-toggle-btn">☀️</button>
-          <a href="contato.html" class="btn-primary hide-on-mobile">Contato</a>
-          <button class="navbar-toggle">☰</button>
+          <a href="contato.html" class="btn btn-secondary hide-on-mobile"
+            >Contato</a
+          >
+          <button id="theme-toggle" aria-label="Mudar tema">
+            <i class="fas fa-sun"></i> <i class="fas fa-moon"></i>
+          </button>
         </div>
-      </nav>
+        <button id="btn-mobile" aria-label="Abrir Menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
     </header>
     <main>
       <div class="thank-you-container">
@@ -50,92 +58,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="main-footer section">
+    <footer id="footer" class="section">
+      <div class="aurora-background">
+        <div class="aurora-shape shape-1"></div>
+        <div class="aurora-shape shape-2"></div>
+      </div>
       <div class="container">
-        <div class="footer-top">
-          <h2>
-            Vamos construir juntos a próxima geração da sua operação financeira?
-          </h2>
+        <div class="footer-top animate-on-scroll animate-fade-in-up">
+          <h2>Vamos construir juntos a próxima geração da sua operação?</h2>
           <p>
-            Nossa equipe está pronta para entender seu desafio e desenhar uma
-            solução de API sob medida.
+            Nossa equipa está pronta para entender seu desafio e desenhar uma
+            solução sob medida.
           </p>
           <a href="contato.html" class="btn btn-primary btn-lg"
             >FALE COM UM ESPECIALISTA</a
           >
         </div>
-        <div class="footer-main">
-          <div class="footer-col">
-            <a href="index.html" class="logo"
-              ><img src="./assets/images/colorida.png" alt="Notreve Tech Logo"
-            /></a>
-            <p class="footer-tagline">
-              Notreve Tech — Infratech para potencializar negócios.
-            </p>
-            <div class="footer-social">
-              <p><strong>Siga-nos nas redes</strong></p>
-              <div class="social-icons">
-                <a
-                  href="#"
-                  target="_blank"
-                  aria-label="Instagram"
-                  title="Instagram"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-                <a
-                  href="#"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                  title="LinkedIn"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-                <a href="#" target="_blank" aria-label="GitHub" title="GitHub"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>Nossos Serviços</h4>
-            <ul class="footer-links">
-              <li><a href="produtos.html" class="link">API de WhatsApp</a></li>
-              <li><a href="produtos.html" class="link">API de SMS</a></li>
-              <li>
-                <a href="produtos.html" class="link">Gateway de Pagamento</a>
-              </li>
-              <li>
-                <a href="produtos.html" class="link"
-                  >Chatbot com IA (Em Breve)</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Desenvolvedores</h4>
-            <ul class="footer-links">
-              <li>
-                <a href="#" target="_blank" class="link">Documentação</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" class="link">Status da API</a>
-              </li>
-              <li><a href="contato.html" class="link">Suporte Técnico</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <ul class="footer-links">
-              <li>
-                <a href="#" target="_blank" class="link">Termos de Uso</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" class="link"
-                  >Política de Privacidade</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+        <div class="footer-main"></div>
         <div class="footer-bottom">
           <p>&copy; 2025 Notreve Tech | Todos os direitos reservados.</p>
         </div>
