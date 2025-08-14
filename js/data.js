@@ -13,7 +13,8 @@ const siteData = {
     buttonText: "Conheça Nossos Produtos",
     buttonLink: "produtos.html",
   },
-  // O resto do ficheiro permanece igual...
+  
+  // Conteúdo da Página de Produtos
   products: [
     {
       id: "gateway",
@@ -52,6 +53,8 @@ const siteData = {
       pageLink: "#",
     },
   ],
+
+  // Conteúdo das Páginas de Produtos Específicos
   productPages: {
     gateway: {
       hero: {
@@ -70,12 +73,12 @@ const siteData = {
             { icon: "fa-solid fa-shield-halved", text: "Segurança de ponta e conformidade com o Banco Central." },
             { icon: "fa-solid fa-chart-line", text: "Dashboard administrativo para gestão de clientes e transações." },
             { icon: "fa-solid fa-file-invoice-dollar", text: "Liquidação automática e relatórios financeiros detalhados." },
-            { icon: "fa-solid fa-headset", text: "Suporte técnico especializado para a sua equipa." }
+            { icon: "fa-solid fa-headset", text: "Suporte técnico especializado para a sua equipe." }
           ]
         },
         {
           title: "Como Funciona?",
-          content: "<p>Nossa equipa trabalha consigo para personalizar a plataforma com a sua identidade visual. Após a configuração, você recebe acesso à nossa API e a um painel de controlo completo para começar a operar. É a forma mais rápida e segura de se tornar um provedor de pagamentos.</p>"
+          content: "<p>Nossa equipe trabalha consigo para personalizar a plataforma com a sua identidade visual. Após a configuração, você recebe acesso à nossa API e a um painel de controle completo para começar a operar. É a forma mais rápida e segura de se tornar um provedor de pagamentos.</p>"
         }
       ]
     },
@@ -130,6 +133,7 @@ const siteData = {
       ]
     }
   },
+  // Conteúdo da Página Sobre Nós
   about: {
     title: "Nós Somos a Notreve Tecnologia",
     paragraphs: [
@@ -137,10 +141,39 @@ const siteData = {
       "Cada solução que construímos é pensada para ser escalável, segura e fácil de integrar, permitindo que nossos clientes foquem no que fazem de melhor: inovar e crescer seus negócios.",
     ],
   },
+  // Informações de contato
   contact: {
     title: "Fale com um Especialista",
     email: "contato@notrevetech.com.br",
-    phone: "+55 (XX) XXXX-XXXX",
-    address: "Rua da Tecnologia, 456, Sala 20, São Paulo - SP",
+    phone: "0800 591 7829",
+    address: "Avenida Amazonas , 261 - Jockey de Itaparica, Vila Velha / ES, 29103-830",
+  },
+  // Informações do footer links
+  footer: {
+    tagline: "Notreve Tech — Infratech para potencializar negócios.",
+    columns: [
+      {
+        title: "Nossos Produtos",
+        links: [
+          { text: "Gateway White Label", href: "gateway-pagamento.html" },
+          { text: "API de WhatsApp", href: "api-whatsapp.html" },
+          { text: "API de SMS", href: "api-sms.html" },
+          { text: "Chatbot com IA (Em Breve)", href: "produtos.html" },
+        ],
+      },
+      {
+        title: "Desenvolvedores",
+        links: [
+          { text: "Suporte Técnico", href: "contato.html" },
+        ],
+      },
+      {
+        title: "Legal",
+        links: [
+          { text: "Termos de Uso", href: "#" },
+          { text: "Política de Privacidade", href: "#" },
+        ],
+      },
+    ],
   },
 };

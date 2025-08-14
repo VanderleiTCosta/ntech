@@ -77,7 +77,7 @@ $data = [
         'email' => 'desenvolvimento@notrevetech.com.br' // Este e-mail precisa estar validado na Brevo
     ],
     'to' => [
-        ['email' => 'overhighdevelopment@gmail.com', 'name' => 'Comercial Notreve']
+        ['email' => 'contato@notrevetech.com.br', 'name' => 'Comercial Notreve']
     ],
     'replyTo' => [
         'email' => $email,
