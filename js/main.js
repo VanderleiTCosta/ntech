@@ -1,6 +1,6 @@
 /**
  * @file main.js
- * @description Script principal para o site institucional da Notreve Tech. */
+ * @description Script principal para o site institucional da Notreve Tecnologia. */
 document.addEventListener("DOMContentLoaded", () => {
   // Verificação crítica da existência dos dados do site
   if (typeof siteData === "undefined") {
@@ -235,7 +235,7 @@ function loadDynamicContent() {
     // Cria o HTML da primeira coluna (logo e tagline)
     const firstColumnHTML = `
         <div class="footer-col animate-on-scroll animate-fade-in-up">
-            <a href="index.html" class="logo"><img src="./assets/images/colorida.png" alt="Notreve Tech Logo"/></a>
+            <a href="index.html" class="logo"><img src="./assets/images/colorida.png" alt="Notreve Tecnologia Logo"/></a>
             <p class="footer-tagline">${siteData.footer.tagline}</p>
         </div>
       `;

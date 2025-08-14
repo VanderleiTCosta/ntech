@@ -1,5 +1,5 @@
 # ===================================================================
-# Dockerfile para o site Notreve Tech (HTML + PHP) - VERSÃO CORRIGIDA
+# Dockerfile para o site Notreve Tecnologia (HTML + PHP)
 # ===================================================================
 
 # PASSO 1: Usar a imagem oficial do PHP com o servidor Apache.

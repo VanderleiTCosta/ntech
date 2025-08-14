@@ -137,7 +137,7 @@ const siteData = {
   about: {
     title: "Nós Somos a Notreve Tecnologia",
     paragraphs: [
-      "Na Notreve Tech, somos apaixonados por resolver problemas complexos com tecnologia de ponta. Nossa missão é fornecer a desenvolvedores e empresas as plataformas e APIs mais robustas do mercado.",
+      "Na Notreve Tecnologia, somos apaixonados por resolver problemas complexos com tecnologia de ponta. Nossa missão é fornecer a desenvolvedores e empresas as plataformas e APIs mais robustas do mercado.",
       "Cada solução que construímos é pensada para ser escalável, segura e fácil de integrar, permitindo que nossos clientes foquem no que fazem de melhor: inovar e crescer seus negócios.",
     ],
   },
@@ -150,7 +150,7 @@ const siteData = {
   },
   // Informações do footer links
   footer: {
-    tagline: "Notreve Tech — Infratech para potencializar negócios.",
+    tagline: "Notreve Tecnologia — Infratech para potencializar negócios.",
     columns: [
       {
         title: "Nossos Produtos",

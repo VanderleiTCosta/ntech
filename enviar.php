@@ -35,7 +35,7 @@ $corpo = "
 <body>
   <div class='container'>
     <div class='header'>
-      <h2>Novo Lead Recebido do Site Notreve Tech</h2>
+      <h2>Novo Lead Recebido do Site Notreve Tecnologia</h2>
     </div>
     <div class='content'>
       <h3>Dados do Contato</h3>
@@ -73,7 +73,7 @@ $apiKey = getenv('BREVO_API_KEY');
 // Dados do e-mail
 $data = [
     'sender' => [
-        'name' => 'Site Notreve Tech',
+        'name' => 'Site Notreve Tecnologia',
         'email' => 'desenvolvimento@notrevetech.com.br' // Este e-mail precisa estar validado na Brevo
     ],
     'to' => [
@@ -83,7 +83,7 @@ $data = [
         'email' => $email,
         'name' => $nome
     ],
-    'subject' => "Novo Lead do Site Notreve Tech - $empresa",
+    'subject' => "Novo Lead do Site Notreve Tecnologia - $empresa",
     'htmlContent' => $corpo
 ];
 
