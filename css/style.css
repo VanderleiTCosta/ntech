@@ -767,7 +767,7 @@ a.is-coming-soon,
     text-align: center;
     padding: 3rem 1.5rem;
     background-color: var(--c-bg-secondary);
-    margin: 3rem auto;
+    margin: 8rem auto;
     max-width: 800px;
     border-radius: var(--border-radius);
 }
