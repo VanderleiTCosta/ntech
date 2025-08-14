@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // INICIALIZAÇÃO GERAL DAS FUNCIONALIDADES
   // ===================================================================
   initializeTheme();
+  initializeFormModal();
   initializeMobileMenu();
   initializeHeaderScroll();
   initializeActiveLink();
@@ -309,6 +310,80 @@ function buildProductPage() {
       })
       .join("");
   }
+}
+
+// ===================================================================
+// LÓGICA DO MODAL DE FORMULÁRIO DE GATEWAY
+// ===================================================================
+function initializeFormModal() {
+  const modal = document.getElementById("form-modal");
+  const openButtons = document.querySelectorAll(".open-modal-btn");
+  const closeModalBtn = document.querySelector(".close-modal");
+  const modalForm = document.getElementById("modal-contact-form");
+
+  // Se não houver elementos do modal na página, não faz nada
+  if (!modal || openButtons.length === 0 || !closeModalBtn || !modalForm) {
+    return;
+  }
+
+  const openModal = (e) => {
+    e.preventDefault();
+    modal.classList.add("visible");
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("visible");
+  };
+
+  // Abrir o modal
+  openButtons.forEach(btn => btn.addEventListener("click", openModal));
+
+  // Fechar o modal
+  closeModalBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    // Fecha somente se clicar no fundo (overlay)
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Fechar com a tecla 'Escape'
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("visible")) {
+      closeModal();
+    }
+  });
+
+  // Lidar com o envio do formulário
+  modalForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
+
+    const submitButton = this.querySelector('button[type="submit"]');
+    submitButton.textContent = 'Enviando...';
+    submitButton.disabled = true;
+
+    const formData = new FormData(this);
+
+    fetch("enviar.php", {
+      method: "POST",
+      body: formData,
+    })
+    .then(response => {
+      if (response.ok) {
+        // Se o envio foi bem-sucedido, redireciona para a página de obrigado
+        window.location.href = "obrigado.html";
+      } else {
+        // Se deu erro, avisa o usuário
+        throw new Error("Houve um erro no envio. Tente novamente.");
+      }
+    })
+    .catch(error => {
+      console.error("Erro:", error);
+      alert(error.message);
+      submitButton.textContent = 'Enviar Solicitação';
+      submitButton.disabled = false;
+    });
+  });
 }
 
 // ===================================================================
