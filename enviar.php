@@ -67,6 +67,10 @@ $corpo = "
 // Endpoint da API
 $url = 'https://api.brevo.com/v3/smtp/email';
 
+// ##################################################################
+// # IMPORTANTE: COLOQUE SUA CHAVE DA API DA BREVO AQUI             #
+// # Você pode obter a chave em: https://app.brevo.com/settings/keys/smtp
+// ##################################################################
 // Sua chave da API (usando variável de ambiente, que é a forma correta)
 //$apiKey = getenv('BREVO_API_KEY');
 $apiKey = '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';
