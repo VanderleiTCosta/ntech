@@ -68,7 +68,8 @@ $corpo = "
 $url = 'https://api.brevo.com/v3/smtp/email';
 
 // Sua chave da API (usando variável de ambiente, que é a forma correta)
-$apiKey = getenv('BREVO_API_KEY');
+//$apiKey = getenv('BREVO_API_KEY');
+$apiKey = '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';
 
 // Dados do e-mail
 $data = [
