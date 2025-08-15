@@ -1,5 +1,5 @@
 /* =================================================================== */
-/* SITE NOTREVE TECNOLOGIA - CÓDIGO FINAL UNIFICADO                    */
+/* SITE NOTREVE TECNOLOGIA                                             */
 /* =================================================================== */
 
 /* ------------------------------------------------------------------- */
@@ -631,7 +631,7 @@ a.is-coming-soon,
     margin-bottom: 2rem;
 }
 
-/* ----------------- Página de Contato (Estilo Aprimorado) ----------------- */
+/* ----------------- Página de Contato ----------------- */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr;
